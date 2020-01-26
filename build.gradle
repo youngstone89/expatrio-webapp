@@ -23,4 +23,6 @@ dependencies {
 	compile('org.flywaydb:flyway-core')
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+	implementation 'org.projectlombok:lombok'
+
 }

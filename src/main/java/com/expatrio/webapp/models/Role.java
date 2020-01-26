@@ -1,5 +1,7 @@
 package com.expatrio.webapp.models;
 
+import lombok.Builder;
+
 import javax.persistence.*;
 
 @Entity

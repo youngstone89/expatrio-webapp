@@ -1,5 +1,7 @@
 package com.expatrio.webapp.models;
 
+import lombok.Builder;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -41,7 +43,7 @@ public class User {
     public User() {
     }
 
-    public User(@NotBlank @Size(max = 20) String username, @NotBlank @Size(max = 50) @Email String email, @NotBlank @Size(max = 120) String password) {
+    public User(String username, String email,String password) {
         this.username = username;
         this.email = email;
         this.password = password;

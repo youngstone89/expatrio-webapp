@@ -14,7 +14,7 @@ public class TestController {
 
     @GetMapping("/all")
     public String allAccess() {
-        return "Public Content.";
+        return "Welcome to Expatrio Customer Management System";
     }
 
     @GetMapping("/customer")
