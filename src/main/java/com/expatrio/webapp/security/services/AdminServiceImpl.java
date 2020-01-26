@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Slf4j
@@ -31,6 +32,12 @@ public class AdminServiceImpl implements AdminService {
 
     @Autowired
     PasswordEncoder encoder;
+
+    @Override
+    public User getCustomer(String id) {
+        Optional<User> userOptional = userRepository.findById(Long.parseLong(id));
+        return userOptional.orElseThrow(()-> new UserNotExistException());
+    }
 
     @Override
     public List<User> getCustomers() {

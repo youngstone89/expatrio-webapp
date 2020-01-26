@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface AdminService {
 
+    User getCustomer(String id);
     List<User> getCustomers();
     User createUser(SignupRequest signupRequest);
     User updateUser(UserRequest userRequest);
