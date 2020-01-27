@@ -14,4 +14,4 @@ COPY --from=builder /home/gradle/src/build/libs/*.jar /app/spring-boot-applicati
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar","/app/spring-boot-application.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=container","-jar","/app/spring-boot-application.jar"]
